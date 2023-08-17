@@ -1,0 +1,120 @@
+.loginContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid white; */
+  margin-top: 5%;
+}
+
+.main {
+  position: relative;
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: column;
+  align-items: center;
+  /* margin: 82px 500px; */
+  width: 500px;
+  height: 700px;
+  background-color: white;
+  border-radius: 40px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.logo {
+  /* border: 2px solid black;*/
+  margin-top: 70px;
+}
+
+h3 {
+  color: silver;
+  margin-bottom: 20px;
+}
+
+.loginSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+.loginHeader {
+  color: rgb(82, 76, 76);
+  font-weight: bold;
+}
+
+.divInp {
+  position: relative;
+  /*border: 2px solid black;*/
+  /*margin: 5px;*/
+}
+
+.icon {
+  position: absolute;
+  left: 20px;
+  top: 37%;
+}
+
+.inputField {
+  margin: 10px;
+  background-color: #f0edff;
+  padding-left: 40px;
+  padding-right: 50px;
+  width: 364px;
+  height: 62px;
+  border-radius: 20px;
+  border: none;
+}
+.inputField:focus {
+  outline: 2px solid rgb(120, 120, 231);
+}
+
+.inputField::placeholder {
+  color: #1c1c1c;
+  /* margin-left: 100px; */
+}
+
+.loginBtn {
+  background-image: linear-gradient(
+    to right,
+    #4776e6 0%,
+    #8e54e9 51%,
+    #4776e6 100%
+  );
+  margin: 10px;
+  padding: 8px 30px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 30px;
+  display: block;
+}
+
+.loginBtn:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+.guestBtn {
+  border: none;
+  box-shadow: none;
+  text-decoration: underline;
+  font-size: 16px;
+}
+
+.invalid {
+  color: red;
+  font-size: 14px;
+}
+.passwordIcon {
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #1c1c1c;
+}

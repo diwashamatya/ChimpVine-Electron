@@ -1,0 +1,258 @@
+.search-form {
+  margin-bottom: 20px;
+  width: 50px;
+}
+
+.modal {
+  color: black;
+}
+.title {
+  color: rgb(94, 78, 241);
+  background-color: rgba(255, 255, 255, 0.731);
+  text-align: center;
+}
+.custom-modal .modal-dialog {
+  max-width: 90%;
+}
+
+.modal-body {
+  background-color: #f5f9ff;
+}
+
+.modal::-webkit-scrollbar {
+  width: 16px; /* Set your preferred width */
+  /* display: none; */
+}
+
+.modal:not([no-y-overflow])::-webkit-scrollbar-thumb {
+  height: 55px;
+  border-radius: 8px;
+  border: 4px solid transparent;
+  background-clip: content-box;
+  /* background-color: var(--yt-spec-text-secondary); */
+  background-color: #d3c7e0d1;
+}
+
+.modal::-webkit-scrollbar-thumb {
+  height: 55px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  border: 4px solid transparent;
+  background-clip: content-box;
+  background-color: #dad5e0b9;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.form input {
+  outline: none;
+  padding: 5px;
+  background-color: rgba(255, 255, 255, 0.731);
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 5px;
+  border-radius: 5px;
+  height: 45px;
+}
+.form input:focus {
+  background-color: white;
+}
+.form-search {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  gap: 5px;
+}
+.clear-icon {
+  position: absolute;
+  right: 12px;
+  cursor: pointer;
+  font-size: 24px;
+  color: #444444;
+}
+
+.clear-icon {
+  position: absolute;
+  right: 12px;
+  cursor: pointer;
+  font-size: 24px;
+  color: #444444;
+  /* Add transition property for smooth animation */
+}
+
+.filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+.filter2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 6px;
+}
+.filter label {
+  color: rgb(71, 18, 183);
+  font-family: Arial, Helvetica, sans-serif;
+}
+.filter2 label {
+  color: rgb(71, 18, 183);
+  font-family: Arial, Helvetica, sans-serif;
+}
+.select {
+  padding: 5px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 5px;
+  height: 45px;
+}
+
+.search-button {
+  border-radius: 50%;
+  height: 62px;
+  position: relative;
+}
+
+.searchBtn {
+  background-color: rgb(108, 92, 250);
+  padding: 10px;
+  font-size: 17px;
+  color: white;
+  /* border-radius: 50%; */
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 500;
+}
+
+.searchBtn:hover {
+  background-color: rgb(89, 72, 244);
+}
+
+.logoutTxt {
+  margin-left: 3px;
+}
+
+.result-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.result-card {
+  width: 500px;
+  margin: 10px 0;
+  padding: 20px 20px;
+  background-color: #946fff;
+  border-radius: 10px;
+
+  cursor: pointer; /* Change the cursor to a pointer */
+}
+.result-card:hover {
+  background-color: #936fffbd;
+  transform: scale(1.03); /* New background color while hovering */
+}
+
+.result-card:active {
+  transform: scale(1); /* Scale down slightly on click */
+}
+.item-name {
+  color: white;
+  font-family: Poppins;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.grade-subject {
+  display: flex;
+  gap: 20%;
+  color: #000;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 10px 0;
+}
+
+.result-type {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  background-color: #e52bdd;
+  padding: 5px 8px;
+  border-radius: 5px;
+}
+
+.result-type-game {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  background-color: #e5861a;
+  padding: 5px 8px;
+  border-radius: 5px;
+}
+
+.subject-icon {
+  margin-right: 6px;
+}
+
+.not-found {
+  margin: 9%;
+  text-align: center;
+}
+.image-subject {
+  display: flex;
+
+  align-items: center;
+}
+
+.loading-container {
+  display: flex;
+  color: black;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  width: 100%;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  z-index: 9999;
+}
+
+.loading-spinner {
+  border: 4px solid rgba(0, 0, 0, 0.3);
+  border-top: 4px solid #ffffff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-text {
+  color: #000000;
+  margin-top: 10px;
+  margin-left: 10px;
+  font-size: 20px;
+}

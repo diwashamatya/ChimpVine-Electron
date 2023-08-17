@@ -1,0 +1,18 @@
+.logout {
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+.logoutBtn {
+  color: white;
+  /* background-color: #ba73ff; */
+  background-color: red;
+  padding: 10px;
+  border: none;
+  font-size: 16px;
+  box-shadow: none;
+  width: 100%;
+  border-radius: 15px;
+  right: 10px;
+  /* position: absolute; */
+}

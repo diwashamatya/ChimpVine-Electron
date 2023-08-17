@@ -1,0 +1,120 @@
+/*
+ * @NOTE: Prepend a `~` to css file paths that are in your node_modules
+ *        See https://github.com/webpack-contrib/sass-loader#imports
+ */
+body {
+  position: relative;
+  color: white!important;
+
+  background: #ba73ff!important;
+  font-family: sans-serif;
+  overflow-y: scroll;
+
+}
+
+body::-webkit-scrollbar {
+  width: 16px;
+}
+
+body:not([no-y-overflow])::-webkit-scrollbar-thumb {
+  height: 55px;
+  border-radius: 8px;
+  border: 4px solid transparent;
+  background-clip: content-box;
+  /* background-color: var(--yt-spec-text-secondary); */
+  background-color: #d3c7e0d1;
+
+
+}
+
+
+body::-webkit-scrollbar-thumb {
+  height: 55px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  border: 4px solid transparent;
+  background-clip: content-box;
+  /* background-color: hsl(0,0%,67%); */
+  background-color: #dad5e0b9;
+}
+
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: "cocoonCustomPrimary",sans-serif;
+
+}
+
+button {
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  appearance: none;
+  font-size: 1.3rem;
+  box-shadow: 0px 8px 28px -6px rgba(24, 39, 75, 0.12),
+    0px 18px 88px -4px rgba(24, 39, 75, 0.14);
+  transition: all ease-in 0.1s;
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+button:hover {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: whitesmoke;
+  text-decoration: none;
+  height: fit-content;
+  width: fit-content;
+  margin: 10px;
+  transition: all ease-in 0.15s;
+}
+
+a:hover {
+  color:white;
+  opacity: 1;
+  text-decoration: none;
+  transform: scale(1.05);
+}
+
+a, a:active, a:focus, a:visited{
+  outline: none;
+}
+
+
+.ic-list, .ic-list a{
+  color: black;
+  transition: all ease-in 0.15s;
+  font-weight: bold;
+}
+
+.ic-list:hover{
+  color: white!important;
+  transform: scale(1.05);
+}
+
+  .game-card{
+    transition: all ease-in 0.15s;
+    background-color: transparent!important;
+    border: 0px!important;
+  }
+  .game-card:hover{
+    transform: scale(1.05);
+    /* color:red!important */
+  }
+
+
+  a.carousel-control-prev, a.carousel-control-prev:hover, a.carousel-control-next, a.carousel-control-next:hover {
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+}
+
+

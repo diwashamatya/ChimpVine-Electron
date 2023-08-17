@@ -1,0 +1,44 @@
+{
+  "questions": [
+    {
+      "question": "What is the special name given to a person who studies rocks and minerals?",
+      "options": [
+        "Geologist",
+        "Biologist",
+        "Astronomer",
+        "Chemist"
+      ],
+      "answer": "Geologist"
+    },
+    {
+      "question": "Who was the famous American president known as 'Honest Abe'?",
+      "options": [
+        "George Washington",
+        "Thomas Jefferson",
+        "Abraham Lincoln",
+        "John F. Kennedy"
+      ],
+      "answer": "Abraham Lincoln"
+    },
+    {
+      "question": "Which author wrote the Harry Potter series?",
+      "options": [
+        "J.K. Rowling",
+        "Stephen King",
+        "George R.R. Martin",
+        "Dan Brown"
+      ],
+      "answer": "J.K. Rowling"
+    },
+    {
+      "question": "What is the common name for a person who flies an aircraft?",
+      "options": [
+        "Driver",
+        "Pilot",
+        "Captain",
+        "Aviator"
+      ],
+      "answer": "Pilot"
+    }
+  ]
+}
