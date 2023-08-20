@@ -345,11 +345,11 @@ const createWindow = async () => {
 
       console.log(exePath);
       event.reply('Screen-data', exePath);
-
+      mainWindow.webContents.send('Game-State', true);
       const fun = function () {
         const child = spawn(exePath, [
           /* arguments */
-          updateAnalyticsData(`Started playing game: ${arg.name}`), //update analytics
+          updateAnalyticsData(`Started playing game: ${arg.name}`),//update analytics
         ]);
 
         child.on('error', (err: any) => {
@@ -358,6 +358,7 @@ const createWindow = async () => {
 
         // Listen for the 'exit' event
         child.on('exit', (code: any) => {
+          mainWindow.webContents.send('Close-Modal');
           updateAnalyticsData(`Stopped playing game: ${arg.name}`); //update analytics
           console.log(`Child process exited with code ${code}`);
         });

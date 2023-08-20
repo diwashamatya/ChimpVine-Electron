@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Card } from 'react-bootstrap';
+import Modal from 'react-bootstrap/Modal';
+import LoadingModal from 'renderer/components/Loading';
 import game1 from '../../../../assets/images/games/Arth.png';
 import game2 from '../../../../assets/images/games/drag.png';
 import game3 from '../../../../assets/images/games/combine.png';
 import game4 from '../../../../assets/images/games/bubble.png';
 
+import './css/gameOpen.css';
 interface Games {
   name: string;
   image: string;
@@ -16,8 +19,34 @@ interface Games {
 //   link:string;
 // }
 
-const Games = () => {
+function Games() {
   const [cardModule, setCardModule] = useState<any>(null);
+
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const handleCloseModal = () => {
+    setModalOpen(false);
+  };
+
+  useEffect(() => {
+    window.electron.ipcRenderer.on('Close-Modal', handleCloseModal);
+    window.electron.ipcRenderer.on('Game-State', async (arg: any) => {
+      // eslint-disable-next-line no-console
+      const data = await arg;
+
+      setModalOpen(data);
+    });
+  }, []);
+    useEffect(() => {
+      window.electron.ipcRenderer.once('Game-State', async (arg: any) => {
+        // eslint-disable-next-line no-console
+        const data = await arg;
+
+        setModalOpen(data);
+
+        // setTestlocation(data);
+      });
+    }, []);
 
   useEffect(() => {
     import('react-bootstrap').then((module) => {
@@ -47,6 +76,7 @@ const Games = () => {
       link: 'assets/games/Grade3/Maths/Bubble-Multiple/Bubblemultiples.exe',
     },
   ];
+
 
   const handleCardClick = (link: any) => {
     // console.log(link);
@@ -83,8 +113,9 @@ const Games = () => {
           </div>
         ))}
       </div>
+      <LoadingModal modalOpen={modalOpen} onHide={handleCloseModal} />
     </div>
   );
-};
+}
 
 export default Games;

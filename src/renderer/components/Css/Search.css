@@ -15,9 +15,9 @@
   max-width: 90%;
 }
 
-.modal-body {
+/* .modal-body {
   background-color: #f5f9ff;
-}
+} */
 
 .modal::-webkit-scrollbar {
   width: 16px; /* Set your preferred width */

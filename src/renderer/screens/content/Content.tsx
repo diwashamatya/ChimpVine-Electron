@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 import Footer from 'renderer/components/Footer';
 import { Card } from 'react-bootstrap';
 import importImages from './Images';
+import LoadingModal from 'renderer/components/Loading';
 
 // sent data
 interface sentData {
@@ -53,7 +54,7 @@ interface Analytics {
   details?: string;
 }
 
-const Content = () => {
+function Content() {
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
   const ID = queryParams.get('id');
@@ -71,6 +72,12 @@ const Content = () => {
   const [screenData, setScreenData] = useState<ScreenData[]>([]);
   const [imagesfile, setImagesfile] = useState<ImageProps>({});
 
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const handleCloseModal = () => {
+    setModalOpen(false);
+  };
+
   useEffect(() => {
     const loadImages = async () => {
       const loadedImages = await importImages();
@@ -82,7 +89,12 @@ const Content = () => {
       event: 'ReadJson',
       link: `${subID}${ID}`,
     };
-
+    window.electron.ipcRenderer.on('Close-Modal', handleCloseModal);
+    window.electron.ipcRenderer.on('Game-State', async (arg: any) => {
+      // eslint-disable-next-line no-console
+      const data = await arg;
+      setModalOpen(data);
+    });
     // eslint-disable-next-line no-console
     window.electron.ipcRenderer.sendMessage('Screen-data', sentData);
 
@@ -242,6 +254,7 @@ const Content = () => {
 
   return (
     <div className="container">
+      <LoadingModal modalOpen={modalOpen} onHide={handleCloseModal} />
       <Heading />
       {/* {loadUI()} */}
       <div className="row">
@@ -284,6 +297,6 @@ const Content = () => {
       <Footer />
     </div>
   );
-};
+}
 
 export default Content;

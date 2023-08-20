@@ -1,0 +1,35 @@
+.fullscreen-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+.fullscreen-modal-content {
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.fullscreen-modal-content h3 {
+  margin: 0;
+}
+
+.fullscreen-modal-content button {
+  margin-top: 10px;
+}
+
+.loading-game-text {
+  color: white;
+  margin-top: 10px;
+  margin-left: 10px;
+  font-size: 30px;
+}

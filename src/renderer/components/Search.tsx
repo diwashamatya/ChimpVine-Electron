@@ -236,14 +236,9 @@ export default function Search() {
           </form>
 
           <div className="data-container">
-            {isLoading ? (
-              <div className="loading-container">
-                <div className="loading-spinner"></div>
-                <p className="loading-text">Loading...</p>
-              </div>
-            ) : searchValue !== '' &&
-              searchValue.length > 2 &&
-              filteredData.length > 0 ? (
+            {searchValue !== '' &&
+            searchValue.length > 2 &&
+            filteredData.length > 0 ? (
               filteredData.map((item, index) => (
                 <div key={index}>
                   {item.type === 'Interactive Content' ? (
